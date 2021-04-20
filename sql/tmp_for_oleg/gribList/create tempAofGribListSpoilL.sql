@@ -1,1 +1,0 @@
-create table arg.dbo.tempAofGribListSpoilL (AktOfNum int, AktDate datetime, Station char(5), TypeAdd int, ReasonDelay int, CreateBy int, SpoilBy int, aofDT bit, aofIDManual int)

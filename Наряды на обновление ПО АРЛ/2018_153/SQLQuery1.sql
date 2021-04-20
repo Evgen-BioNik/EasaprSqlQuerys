@@ -1,6 +1,0 @@
-IF EXISTS( SELECT * FROM nsi.dbo.T_aofType WHERE id = 1275)
- 
-UPDATE nsi.dbo.T_aofType
-SET [active] = 1,
-aofSet = '{"param" : {"haveDowntime":0,"haveDesc":1,"haveDescAdd":0,"haveEtran":0,"haveAsoup":0,"blockCarriage":1,"haveNew":0},"DescFormat":[{"id":"nodt","hidden":false,"parts":[{"type":"txt","text":"Произведено взвешивание поезда"},{"type":"input","id":"trIndex","label":"индекс","width":120,"elClass":"from_trainIndex","block":1},{"type":"txt","text":"на вагонных весах РТВ-Д"},{"type":"input","id":"scalesModel","label":"модель","width":150},{"type":"txt","text":", приписанных станции"},{"type":"station","id":"scalesStation","label":"название станции","elClass":"from_aofStation","block":1},{"type":"txt","text":", класс точности"},{"type":"input","id":"scalesClass","label":"класс","width":50},{"type":"txt","text":", учётный №"},{"type":"input","id":"scalesNum","label":"номер","width":100},{"type":"txt","text":". Гос. поверка"},{"type":"date","id":"scalesDate","calendar":1},{"type":"txt","text":"<br><br>Данные перевески вагона(ов):<br>"},{"type":"txt_area","id":"verificationResult","height":"100","block":1}]}]}'
-WHERE id = 1275	
