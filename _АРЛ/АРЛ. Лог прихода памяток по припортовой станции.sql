@@ -25,7 +25,7 @@ WHERE lm.typeMess = 'memoErr'
 ORDER BY lm.docId DESC 
 
 
---они вообще есть???
+--РѕРЅРё РІРѕРѕР±С‰Рµ РµСЃС‚СЊ???
 SELECT TOP 100 *
 from arg.dbo.memo_car AS mc WITH (NOLOCK)
 INNER JOIN arg.dbo.memo AS m WITH (NOLOCK) ON m.memoId = mc.memoId
@@ -34,7 +34,7 @@ WHERE mc.cleanDate > '08.12.16' AND m.memoType = 2 AND ds.priport = 1 --AND ds.C
  
 
 /*
--- долго работает
+-- РґРѕР»РіРѕ СЂР°Р±РѕС‚Р°РµС‚
 SELECT TOP 100 *
 FROM arg.dbo.memo AS m
 INNER JOIN nsi.dbo.D_Station AS ds ON ds.code = m.memoStation

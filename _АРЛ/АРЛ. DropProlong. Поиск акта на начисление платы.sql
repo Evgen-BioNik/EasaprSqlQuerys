@@ -1,11 +1,11 @@
---Ебашить на 10.246.101.18
+--Р•Р±Р°С€РёС‚СЊ РЅР° 10.246.101.18
 DECLARE @aofIdFinal INT, @aofIdDropProlong INT;
 
-	SET @aofIdFinal			= 112150128		-- итоговый акт
---	SET @aofIdDropProlong	= 111762194		-- итоговый акт на начисление платы
+  SET @aofIdFinal       = 112150128  -- РёС‚РѕРіРѕРІС‹Р№ Р°РєС‚
+--SET @aofIdDropProlong = 111762194  -- РёС‚РѕРіРѕРІС‹Р№ Р°РєС‚ РЅР° РЅР°С‡РёСЃР»РµРЅРёРµ РїР»Р°С‚С‹
 
 /*
-	UPDATE prolong.dbo.DropProlong SET [state] = 0 WHERE aofIdfinal = 120990984
+    UPDATE prolong.dbo.DropProlong SET [state] = 0 WHERE aofIdfinal = 120990984
  
 */
 SELECT TOP 100 dp.idProlong
@@ -42,12 +42,12 @@ SELECT TOP 100 dp.idProlong
       ,dp.upTrainIndex
 FROM   prolong.dbo.DropProlong AS dp
 WHERE dp.[state] = 1
-	AND CASE 
-		WHEN @aofIdFinal IS NOT NULL THEN dp.aofIdfinal
-		WHEN @aofIdDropProlong IS NOT NULL THEN dp.aofIdDropProlong
-		ELSE 1 
-	END = CASE 
-		WHEN @aofIdFinal IS NOT NULL THEN @aofIdFinal
-		WHEN @aofIdDropProlong IS NOT NULL THEN @aofIdDropProlong
-		ELSE 1 
-	END
+    AND CASE 
+        WHEN @aofIdFinal IS NOT NULL THEN dp.aofIdfinal
+        WHEN @aofIdDropProlong IS NOT NULL THEN dp.aofIdDropProlong
+        ELSE 1 
+    END = CASE 
+        WHEN @aofIdFinal IS NOT NULL THEN @aofIdFinal
+        WHEN @aofIdDropProlong IS NOT NULL THEN @aofIdDropProlong
+        ELSE 1 
+    END
