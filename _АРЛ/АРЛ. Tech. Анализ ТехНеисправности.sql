@@ -1,6 +1,6 @@
 --Ебашить на 10.246.101.18
 
-DECLARE @CarNum VARCHAR(8)='51420255'; --Номер вагона для поиска
+DECLARE @CarNum VARCHAR(8)='95075545'; --Номер вагона для поиска
 
 /*
  *  Место для UPDATE-ов, будет наполнятся в процессе
@@ -13,6 +13,7 @@ SELECT tp.id
       ,tp.dateDetect,tp.station,rtrim(s23.Name) 'СтанцияОбнаружения',tp.aofIdTechBegin ,tp.vu23EtdId
       ,tp.dateRepair ,tp.stationRepair,rtrim(s36.Name) 'СтанцияРемонта',tp.aofIdTechEnd,tp.vu36EtdId
       ,tp.[status] 'Вкладка',tp.aof_before_vu
+      ,tp.vu23Num,tp.vu36Num, tp.vu36Date
 FROM   arg.dbo.tech_processing tp
       LEFT JOIN nsi.dbo.D_Station s23 ON tp.station = s23.Code
       LEFT JOIN nsi.dbo.D_Station s36 ON tp.stationRepair = s36.Code
