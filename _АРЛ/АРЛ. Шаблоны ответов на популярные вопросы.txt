@@ -504,7 +504,7 @@ Evgen [Ne]BioNik, [16.12.19 15:00]
 
 Запросы для получения информации:
 1. К серверу АРЛ НП 10.246.114.21 select * from arg_model.gu2vg_model where "gu2vDocId" = 'ИД ДОКУМЕНТА' и select * from arg_model.gu2vg_model where "gu2gDocId" = 'ИД ДОКУМЕНТА'
-2. К серверу АРЛ СП 10.246.101.18 SELECT * FROM arg.dbo.logMess WHERE typeMess LIKE '%ИД ДОКУМЕНТА%' AND dateMess BETWEEN 'ПЕРИОД ПОИСКА' AND 'ПЕРИОД ПОИСКА'
+2. К серверу АРЛ СП 10.246.101.18 SELECT * FROM arg.dbo.logMess WHERE textMess LIKE '%ИД ДОКУМЕНТА%' AND dateMess BETWEEN 'ПЕРИОД ПОИСКА' AND 'ПЕРИОД ПОИСКА'
 , где ИД ДОКУМЕНТА - это ид Гу-2В или Гу-2Г
 ПЕРИОД ПОИСКА - дата передачи документа в ЕАСАПР +- сутки.
 
